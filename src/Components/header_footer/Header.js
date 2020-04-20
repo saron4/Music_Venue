@@ -13,7 +13,7 @@ class Header extends Component {
         drawerOpen: false,
         headerShow: false
     }
-
+    //this compnenent did mount trigger the function handleScroll
     componentDidMount() {
       window.addEventListener('scroll', this.handleScroll);//this is vanilla js
         }
