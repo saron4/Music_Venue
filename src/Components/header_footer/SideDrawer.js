@@ -22,7 +22,7 @@ const SideDrawer = (props) => {
                     </ListItem>
 
                     <ListItem button onClick = {() => console.log('featured')}>
-                       hIGHLIGHTS
+                       Highlights
                     </ListItem>
 
                     <ListItem button onClick = {() => console.log('featured')}>

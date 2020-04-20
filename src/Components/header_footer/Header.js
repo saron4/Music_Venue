@@ -63,7 +63,7 @@ class Header extends Component {
 
                     <SideDrawer
                         open={this.state.drawerOpen}
-                        onClose={(value)=> this.toggleDrawer(true)}
+                        onClose={(value)=> this.toggleDrawer(value)}
                     />
 
                 </Toolbar>
