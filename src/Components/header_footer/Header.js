@@ -14,9 +14,27 @@ class Header extends Component {
         headerShow: false
     }
 
+    componentDidMount() {
+      window.addEventListener('scroll', this.handleScroll);//this is vanilla js
+        }
+      
+        handleScroll =() => {
+         if(window.scrollY > 0){
+            this.setState({
+              headerShow: true
+            })
+         }
+          else{
+            this.setState({
+              headerShow: false
+            })
+          }
+        }
+
     toggleDrawer = (value) => {
         this.setState({
-            drawerOpen: value
+            drawerOpen:value,
+            headerShow: false
         })
     }
 
@@ -25,7 +43,7 @@ class Header extends Component {
             <AppBar
                 position="fixed"
                 style={{
-                    backgroundColor: '#2f2f2f',
+                    backgroundColor: this.state.headerShow ? '#2f2f2f' : 'transparent',
                     boxShadow: 'none',
                     padding: '10px 0px'
                 }}
@@ -45,7 +63,7 @@ class Header extends Component {
 
                     <SideDrawer
                         open={this.state.drawerOpen}
-                        onClose={(value)=> this.toggleDrawer(value)}
+                        onClose={(value)=> this.toggleDrawer(true)}
                     />
 
                 </Toolbar>
