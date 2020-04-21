@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Fade from 'react-reveal/Fade';
 import Slide from 'react-reveal/Slide';
 
+import MyButton from '../utils/MyButton';
+
  class Discount extends Component {
 
     state = {
@@ -54,9 +56,12 @@ import Slide from 'react-reveal/Slide';
                             humour, or non-characteristic words etc.
                         </p>
 
-                        <div>
-                             button
-                        </div>
+                        <MyButton
+                            text = "Purchase tickets"
+                            bck="#ffa800"
+                            color="#ffffff"
+                            link="http://google.com"
+                        />
 
                     </div>
                 </Slide>
